@@ -48,7 +48,8 @@ namespace MontyHallProblem
                 return;
 
             // Initializing
-            Random random = new();
+
+            Random random = new((int)DateTime.Now.Ticks);
             int games = 0;
             int wonGames = 0;
 
@@ -70,21 +71,15 @@ namespace MontyHallProblem
                 doors.Remove(doors[hostChoice]);
 
                 // Decrementing either variables if they were larger than the host's choice
-                // Accommodates the resizing of the list so there's no array out of bounds exceptions
+                // Accommodates the resizing of the list due to host's choice removal
                 if (playerChoice > hostChoice)
                     playerChoice--;
                 if (prize > hostChoice)
                     prize--;
 
-                // Will swap if yes or if random and rolled good number
+                // Will swap player's index if yes or if random and rolled good number
                 if (selection == Selection.Yes || (selection == Selection.Random && random.Next(0, 2) == 0))
-                {
-                    // Swapping the index of player choice to other door
-                    if (playerChoice == 0)
-                        playerChoice = 1;
-                    else
-                        playerChoice = 0;
-                }
+                    playerChoice ^= 1;
 
                 // Player wins if their choice is the prize door
                 if (playerChoice == prize)
@@ -96,7 +91,7 @@ namespace MontyHallProblem
 
             // Formatting output
             DetailedGames.Text = $"Out of {games} games, the player won {wonGames}";
-            double percent = wonGames / (double)games;
+            double percent = wonGames / (double)games * 100;
             PlayerPercent.Text = $"The player won {Math.Round(percent, 3)}% of all games";
         }
     }

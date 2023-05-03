@@ -41,6 +41,7 @@
             // 
             // AllYesToggle
             // 
+            this.AllYesToggle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.AllYesToggle.AutoSize = true;
             this.AllYesToggle.Location = new System.Drawing.Point(38, 102);
             this.AllYesToggle.Name = "AllYesToggle";
@@ -53,6 +54,7 @@
             // 
             // AllNoToggle
             // 
+            this.AllNoToggle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.AllNoToggle.AutoSize = true;
             this.AllNoToggle.Location = new System.Drawing.Point(117, 102);
             this.AllNoToggle.Name = "AllNoToggle";
@@ -65,6 +67,7 @@
             // 
             // RandomToggle
             // 
+            this.RandomToggle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RandomToggle.AutoSize = true;
             this.RandomToggle.Location = new System.Drawing.Point(197, 102);
             this.RandomToggle.Name = "RandomToggle";
@@ -77,6 +80,7 @@
             // 
             // SwitchLabel
             // 
+            this.SwitchLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.SwitchLabel.AutoSize = true;
             this.SwitchLabel.Location = new System.Drawing.Point(33, 80);
             this.SwitchLabel.Name = "SwitchLabel";
@@ -86,6 +90,7 @@
             // 
             // IterationInput
             // 
+            this.IterationInput.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.IterationInput.Location = new System.Drawing.Point(96, 42);
             this.IterationInput.Name = "IterationInput";
             this.IterationInput.Size = new System.Drawing.Size(100, 23);
@@ -93,6 +98,7 @@
             // 
             // RunCountQ
             // 
+            this.RunCountQ.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RunCountQ.AutoSize = true;
             this.RunCountQ.Location = new System.Drawing.Point(30, 24);
             this.RunCountQ.Name = "RunCountQ";
@@ -102,6 +108,7 @@
             // 
             // RunButton
             // 
+            this.RunButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RunButton.Location = new System.Drawing.Point(109, 129);
             this.RunButton.Name = "RunButton";
             this.RunButton.Size = new System.Drawing.Size(75, 23);
@@ -111,6 +118,7 @@
             // 
             // PlayerPercent
             // 
+            this.PlayerPercent.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PlayerPercent.AutoSize = true;
             this.PlayerPercent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PlayerPercent.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -137,6 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(318, 252);
             this.Controls.Add(this.DetailedGames);
             this.Controls.Add(this.PlayerPercent);
@@ -147,7 +156,11 @@
             this.Controls.Add(this.RandomToggle);
             this.Controls.Add(this.AllNoToggle);
             this.Controls.Add(this.AllYesToggle);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(334, 291);
             this.Name = "MontyWindow";
+            this.ShowIcon = false;
             this.Text = "Monty Hall Simulation";
             this.ResumeLayout(false);
             this.PerformLayout();
